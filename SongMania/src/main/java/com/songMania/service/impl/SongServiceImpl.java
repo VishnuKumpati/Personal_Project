@@ -17,7 +17,7 @@ public class SongServiceImpl implements SongService {
 	@Override
 	public String addSong(Song song) {
 	    Song savedSong = repo.save(song);
-	    if (savedSong != null && savedSong.getId!= null) {
+	    if (savedSong != null && savedSong.getId()!= null) {
 	        return "Song saved successfully";
 	    } else {
 	        return "Song not saved";
@@ -26,4 +26,4 @@ public class SongServiceImpl implements SongService {
 
 	}
 
-}
+
